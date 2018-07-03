@@ -16,7 +16,7 @@ http.createServer(function  (req, res) {
     });
   }  else if (req.url.match(/.css$/)) {
 
-      var cssPath = patch.join(__dirname, 'public', req.url);
+      var cssPath = path.join(__dirname, 'public', req.url);
       var fileStream = fs.createReadStream(cssPath, "UTF-8");
 
       res.writeHead(200, {"Content-Type": "text/css"});
